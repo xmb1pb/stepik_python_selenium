@@ -1,0 +1,1 @@
+This is a practice for software testing automation with Selenium+Python 
