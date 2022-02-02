@@ -17,7 +17,7 @@ def browser():
     browser.quit()
 
 
-@pytest.mark.smoke
+@pytest.mark.xfail(strict=True)
 def test_one(browser):
     url = 'http://suninjuly.github.io/registration1.html'
 
@@ -34,7 +34,7 @@ def test_one(browser):
     assert welcome_text_elt == expected_text, f'Expected {expected_text}, got {welcome_text_elt}'
 
 
-@pytest.mark.xfail
+@pytest.mark.smoke
 def test_two(browser):
     url = 'http://suninjuly.github.io/registration2.html'
     browser.get(url)
